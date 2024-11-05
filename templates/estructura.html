@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="titulo">{{ nombre }}</div>
+<p class="text-center lead mb-4">{{ explicacion }}</p>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h2 class="h5 mb-0">Código de Ejemplo:</h2>
+    </div>
+    <div class="card-body">
+        <pre class="bg-light p-3 rounded"><code>{{ codigo }}</code></pre>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header bg-success text-white">
+        <h2 class="h5 mb-0">Resultado:</h2>
+    </div>
+    <div class="card-body">
+        <pre class="bg-light p-3 rounded"><code>{{ resultado }}</code></pre>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <a href="{{ url_for('menu') }}" class="btn btn-primary">Volver al Menú</a>
+</div>
+{% endblock %}
